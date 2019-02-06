@@ -224,6 +224,7 @@ class TestHTTPClient(unittest.TestCase):
             except Exception as e:
                 print("An Exception was thrown for %s" % url)
                 self.assertTrue( False, "An Exception was thrown for %s %s" % (url,e))
+            
             self.assertTrue(req != None, "None Returned! %s" % url)
             self.assertTrue(req.code == 200 or 
                             req.code == 301 or
